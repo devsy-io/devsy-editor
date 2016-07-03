@@ -1,7 +1,4 @@
 import React from 'react'
+import DevsyEditor from 'devsy-editor'
 
-export default () => {
-  return (
-    <div>Hello, World!</div>
-  )
-}
+export default () => <DevsyEditor />
