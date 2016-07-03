@@ -29,7 +29,7 @@ export default {
       include: [APP_PATH, SRC_PATH]
     }]
   },
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     port: 3000,
     stats: { colors: true },
