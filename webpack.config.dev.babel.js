@@ -29,6 +29,7 @@ export default {
       include: [APP_PATH, SRC_PATH]
     }]
   },
+  devtool: 'eval',
   devServer: {
     port: 3000,
     stats: { colors: true },
