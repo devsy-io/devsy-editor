@@ -6,6 +6,10 @@
   "scripts": {
     "phoenix": "rimraf node_modules && npm install",
     "clean": "rimraf lib dist coverage",
+    "pregh-pages": "rimraf ./examples/dist/*",
+    "gh-pages": "npm run gh-pages:build && npm run gh-pages:publish",
+    "gh-pages:build": "NODE_ENV=production webpack --config webpack.config.gh-pages.babel.js",
+    "gh-pages:publish": "gh-pages -d examples",
     "lib": "npm run lib:scss && npm run lib:js",
     "lib:js": "babel src --out-dir lib",
     "lib:scss": "copyfiles -u 1 './src/**/*.scss' lib",
@@ -44,6 +48,7 @@
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "gh-pages": "^0.11.0",
+    "html-webpack-plugin": "^2.22.0",
     "mocha": "^2.5.3",
     "node-sass": "^3.8.0",
     "react": "^15.2.0",

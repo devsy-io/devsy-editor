@@ -1,5 +1,6 @@
 import {join} from 'path'
 import {HotModuleReplacementPlugin} from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const SRC_PATH = join(__dirname, '/src')
 const APP_PATH = join(__dirname, '/examples')
@@ -37,6 +38,7 @@ export default {
     publicPath: '/dist/'
   },
   plugins: [
-    new HotModuleReplacementPlugin()
+    new HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin()
   ]
 }

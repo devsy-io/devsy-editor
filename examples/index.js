@@ -3,7 +3,11 @@ import ReactDom from 'react-dom'
 import App from './components/App'
 import './components/index.scss'
 
-ReactDom.render(
-  <App />,
-  document.getElementById('root')
-)
+let root = document.getElementById('root')
+
+if (!root) {
+  root = document.createElement('div')
+  document.body.appendChild(root)
+}
+
+ReactDom.render(<App />, root)
