@@ -22,5 +22,8 @@ export const styles = {
   },
   hashtag: {
     color: 'rgba(95, 184, 138, 1.0)'
+  },
+  code: {
+    background: '#ccc'
   }
 }
