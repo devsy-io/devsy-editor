@@ -71,6 +71,7 @@
     "react-dom": "^15.2.0"
   },
   "dependencies": {
-    "draft-js": "^0.7.0"
+    "draft-js": "^0.7.0",
+    "draft-js-multidecorators": "^1.0.0"
   }
 }
