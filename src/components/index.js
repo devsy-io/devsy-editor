@@ -1,9 +1,9 @@
 import {HandleSpan} from './handle'
 import {HashtagSpan} from './hashtag'
-import {CodeSpan} from './code'
+import {CodeHighlighter} from './code'
 
 export {
   HandleSpan,
   HashtagSpan,
-  CodeSpan
+  CodeHighlighter
 }

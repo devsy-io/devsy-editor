@@ -8,6 +8,7 @@ import js from 'highlight.js/lib/languages/javascript'
 // Then register them with lowlight
 Lowlight.registerLanguage('js', js)
 
-export const CodeSpan = ({children}) => {
-  return <Lowlight language='js' value={children[0].props.text} />
+export const CodeHighlighter = ({children}) => {
+  const {text} = children[0].props
+  return <Lowlight language='js' value={text.replace(/`+/g, '')} inline />
 }

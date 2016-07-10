@@ -1,5 +1,5 @@
 import {handleStrategy, hashtagStrategy, codeStrategy} from '../strategies'
-import {HandleSpan, HashtagSpan, CodeSpan} from '../components'
+import {HandleSpan, HashtagSpan, CodeHighlighter} from '../components'
 
 const composites = [{
   strategy: handleStrategy,
@@ -9,7 +9,7 @@ const composites = [{
   component: HashtagSpan
 }, {
   strategy: codeStrategy,
-  component: CodeSpan
+  component: CodeHighlighter
 }]
 
 export default composites

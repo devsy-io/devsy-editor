@@ -1,10 +1,12 @@
-
 import {optimize, DefinePlugin} from 'webpack'
 import {resolve} from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 export default {
-  entry: resolve(__dirname, 'src'),
+  entry: {
+    app: resolve(__dirname, 'src'),
+    vendors: ['draft-js', 'react-lowlight']
+  },
   module: {
     loaders: [{
       test: /\.js$/,
@@ -37,7 +39,11 @@ export default {
         screw_ie8: true,
         warnings: false
       }
-    })
+    }),
+    new optimize.CommonsChunkPlugin(
+      /* chunkName= */'vendor',
+      /* filename= */'vendor.bundle..min.js'
+    )
   ],
   resolve: {
     extensions: ['', '.js']

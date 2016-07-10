@@ -72,9 +72,6 @@
   },
   "dependencies": {
     "draft-js": "^0.7.0",
-    "draft-js-multidecorators": "^1.0.0",
-    "immutable": "^3.8.1",
-    "lowlight": "^1.2.0",
     "react-lowlight": "^1.0.2"
   }
 }
