@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {Editor, EditorState} from 'draft-js'
-import decorator from './decorators'
+import {Editor, EditorState, CompositeDecorator} from 'draft-js'
+import composites from './composites'
 import {styles} from './styles'
 
 class DevsyEditor extends Component {
@@ -8,7 +8,7 @@ class DevsyEditor extends Component {
     super(props)
 
     this.state = {
-      editorState: EditorState.createEmpty(decorator)
+      editorState: EditorState.createEmpty(new CompositeDecorator(composites))
     }
 
     this.onChange = (editorState) => this.setState({editorState})
