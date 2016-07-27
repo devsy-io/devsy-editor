@@ -1,11 +1,11 @@
-import {handleStrategy, hashtagStrategy} from '../strategies'
-import {HandleSpan, HashtagSpan} from '../components'
+import {mentionStrategy, hashtagStrategy} from '../strategies'
+import {Mention, Hashtag} from '../components'
 
 export default [{
-  strategy: handleStrategy,
-  component: HandleSpan
+  strategy: mentionStrategy,
+  component: Mention
 },
 {
   strategy: hashtagStrategy,
-  component: HashtagSpan
+  component: Hashtag
 }]

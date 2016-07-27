@@ -1,7 +1,11 @@
-import {HandleSpan} from './handle'
-import {HashtagSpan} from './hashtag'
+import {Mention} from './Mention'
+import {Hashtag} from './Hashtag'
+import InlineStyleControls from './InlineStyleControls'
+import BlockStyleControls from './BlockStyleControls'
 
 export {
-  HandleSpan,
-  HashtagSpan
+  Mention,
+  Hashtag,
+  InlineStyleControls,
+  BlockStyleControls
 }

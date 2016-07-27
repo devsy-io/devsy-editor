@@ -1,6 +1,5 @@
 import React from 'react'
-import {styles} from '../styles'
 
-export const HashtagSpan = ({children}) => {
-  return <span style={styles.hashtag}>{children}</span>
+export const Hashtag = ({children}) => {
+  return <span className='Hashtag'>{children}</span>
 }
