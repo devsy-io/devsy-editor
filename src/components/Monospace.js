@@ -2,11 +2,12 @@ import React from 'react'
 import {Entity} from 'draft-js'
 import {SyntaxHighlighter} from 'devsy-components'
 
-export default function Monospace (props) {  
+export default function Monospace (props) {
   return (
-    <div style={{ display: 'inline-block' }}>
+    <div className='devsy-Monospace'>
       <span style={{ display: 'none' }}>`</span>
-      <SyntaxHighlighter snippet={props.decoratedText.replace(/`+/g, '')} language='javascript' />
+      {/* <SyntaxHighlighter snippet={props.decoratedText.replace(/`+/g, '')} language='javascript' /> */}
+      {props.children}
       <span style={{ display: 'none' }}>`</span>
     </div>
   )
