@@ -3,6 +3,7 @@ import {Entity} from 'draft-js'
 import {SyntaxHighlighter} from 'devsy-components'
 
 export default function Monospace (props) {
+  console.log(props)
   return (
     <div className='devsy-Monospace'>
       <span style={{ display: 'none' }}>`</span>
