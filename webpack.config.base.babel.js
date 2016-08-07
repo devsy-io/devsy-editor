@@ -7,8 +7,7 @@ export default {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel-loader'],
-      exclude: /node_modules/
+      loaders: ['babel-loader']
     }, {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),

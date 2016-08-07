@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Hashtag = ({children}) => {
-  return <span className='Hashtag'>{children}</span>
+export default function Hashtag ({children}) {
+  return <span className='devsy-Hashtag'>{children}</span>
 }

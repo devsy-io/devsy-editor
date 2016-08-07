@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Mention = ({children}) => {
-  return <span className='Mention'>{children}</span>
+export default function Mention ({children}) {
+  return <span className='devsy-Mention'>{children}</span>
 }

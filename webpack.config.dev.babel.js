@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const SRC_PATH = join(__dirname, '/src')
 const APP_PATH = join(__dirname, '/examples')
+const COMPONENTS_PATH = join(__dirname, '..', 'devsy-components', 'src')
 
 export default {
   context: APP_PATH,
@@ -23,11 +24,11 @@ export default {
     loaders: [{
       test: /\.scss$/,
       loaders: ['style', 'css', 'sass'],
-      include: [APP_PATH, SRC_PATH]
+      include: [APP_PATH, SRC_PATH, COMPONENTS_PATH]
     }, {
       test: /\.js$/,
       loaders: ['babel'],
-      include: [APP_PATH, SRC_PATH]
+      include: [APP_PATH, SRC_PATH, COMPONENTS_PATH]
     }]
   },
   devtool: 'cheap-module-eval-source-map',

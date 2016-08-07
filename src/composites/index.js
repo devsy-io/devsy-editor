@@ -1,11 +1,13 @@
-import {mentionStrategy, hashtagStrategy} from '../strategies'
-import {Mention, Hashtag} from '../components'
+import {mentionStrategy, hashtagStrategy, monospaceStrategy} from '../strategies'
+import {Mention, Hashtag, Monospace} from '../components'
 
 export default [{
   strategy: mentionStrategy,
   component: Mention
-},
-{
+}, {
   strategy: hashtagStrategy,
   component: Hashtag
+}, {
+  strategy: monospaceStrategy,
+  component: Monospace
 }]
