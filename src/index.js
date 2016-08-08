@@ -23,6 +23,7 @@ class DevsyEditor extends Component {
 
   _handleKeyCommand (command) {
     const {editorState} = this.state
+    console.log(editorState.getSelection())
     const newState = RichUtils.handleKeyCommand(editorState, command)
     if (newState) {
       this.onChange(newState)
