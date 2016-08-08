@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import {
   Editor,
   EditorState,
-  CompositeDecorator
+  CompositeDecorator,
+  RichUtils
 } from 'draft-js'
 import composites from './composites'
 
@@ -17,6 +18,17 @@ class DevsyEditor extends Component {
 
     this.onChange = (editorState) => this.setState({editorState})
     this.focus = () => this.refs.editor.focus()
+    this.handleKeyCommand = (command) => this._handleKeyCommand(command)
+  }
+
+  _handleKeyCommand (command) {
+    const {editorState} = this.state
+    const newState = RichUtils.handleKeyCommand(editorState, command)
+    if (newState) {
+      this.onChange(newState)
+      return true
+    }
+    return false
   }
 
   render () {
@@ -26,6 +38,7 @@ class DevsyEditor extends Component {
       <Editor
         editorState={editorState}
         onChange={this.onChange}
+        handleKeyCommand={this.handleKeyCommand}
         placeholder='Tell a story...'
         ref='editor'
       />
