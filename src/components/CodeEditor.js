@@ -59,7 +59,9 @@ export default class CodeEditor extends Component {
   render () {
     return (
       <div className='devsy-CodeEditor'>
-        <input type='text' placeholder='File name including extension...' onChange={this.lookupFileName} />
+        <div className='devsy-CodeEditor-header'>
+          <input type='text' placeholder='File name including extension...' onChange={this.lookupFileName} />
+        </div>
         <div id='devsy-CodeEditor'></div>
       </div>
     )
