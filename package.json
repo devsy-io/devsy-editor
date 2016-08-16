@@ -72,10 +72,8 @@
   },
   "dependencies": {
     "@segment/load-script": "^1.0.1",
-    "ace-builds": "^1.2.2",
     "devsy-components": "^0.0.1",
     "draft-js": "^0.7.0",
-    "find-with-regex": "^1.0.2",
-    "script-onload": "^1.0.2"
+    "find-with-regex": "^1.0.2"
   }
 }
